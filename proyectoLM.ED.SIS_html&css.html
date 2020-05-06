@@ -8,22 +8,59 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <style>
+        body{
+  background-image:url(https://wallpaperaccess.com/full/343966.jpg);
+   padding: 100px;
+    height: 100%; 
+    background-position: center;
+  background-size: cover;
+  font-family: "Lato", sans-serif;
+}
     .header {
-  padding: 10px;
+  padding: 80px;
   text-align: center;
-  background: #440168;
-  color: #ffffff;
-  font-size: 50px;
-    }
+  color: white;
+  font: size 180;
+}
     .carousel-inner{
         width:100%;
     }
+  .row {  
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+}
+
+.side {
+  -ms-flex: 30%;
+  flex: 30%;
+  color: white;
+  padding: 20px;
+}
+.sidenav {
+  height: 100%;
+  width: 80px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
     </style>
   <body>
     <div class="header">
         <h1>GAME EXPIRIENCE</h1>
         <p>  </p>
         <p>Popular multiplayer games</p>
+      </div>
+      <div class="sidenav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#clients">Clients</a>
+        <a href="#contact">Contact</a>
       </div>
     <div class="container">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -61,7 +98,16 @@
       </a>
     </div>
   </div>
-<button onclick="home()">inicio</button>
-<button onclick="back()">atras</button>
+  <button onclick="home()">inicio</button>
+  <button onclick="back()">atras</button>
+  <div class="row">
+    <div class="side">
+      <h2>About us</h2>
+      <p>Were two college students making a website as a project</p>
+      <p>We write about popular games that we've played, giving our opinion on what we think about them,
+         writing about features and things that can be improved within the game.
+      </p>
+    </div>
+  </div>
   </body>
   </html>
