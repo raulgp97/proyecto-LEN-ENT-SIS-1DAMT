@@ -15,8 +15,8 @@
 background-image:url(https://wallpaperaccess.com/full/343966.jpg);
 padding: 100px;
 height: 100%; 
-background-position: center;
-background-size: cover;
+background-position:top;
+background-size:cover;
 font-family: "Lato", sans-serif;
 }
 .sidebar {
@@ -92,6 +92,57 @@ color: #f1f1f1;
     text-align: left;
   }
 }
+/*Contact*/
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: rgb(50, 21, 133);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color:  rgb(50, 21, 133);
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
 </style>
 
 <body>
@@ -99,9 +150,10 @@ color: #f1f1f1;
     </div>
     
     <div class="topnav" id="myTopnav">
-        <a href="#home">Inicio</a>
+        <a href="#Inicio"> <button onclick="Inicio()">inicio</button></a>
         <a href="#Nosotros">Nosotros</a>
         <a href="#contact"class="active">Contactar</a>
+        <a href="#Atras"> <button onclick="Atra()">atras</button></a>
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
       <script>
@@ -114,8 +166,30 @@ color: #f1f1f1;
           }
         }
         </script>
-          <button onclick="home()">inicio</button>
-          <button onclick="back()">atras</button>
+        <div class="container">
+          <div style="text-align:center">
+            <h2>Contact Us</h2>
+            <p>Tell us what you think</p>
+            <p>Leave any requests or suggestions for game reviews:</p>
+          </div>
+          <div class="row">
+            <div class="column">
+              <img src="http://cdn.segmentnext.com/wp-content/uploads/2016/01/Video-Games-Controllers.jpg" style="width:100%">
+            </div>
+            <div class="column">
+              <form>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                <div> &nbsp;&nbsp;</div> 
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+          </div>
+        </div>
 
 
 </body>

@@ -13,7 +13,9 @@
   background-image:url(https://wallpaperaccess.com/full/343966.jpg);
    padding: 100px;
     height: 100%; 
-    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
   background-size: cover;
   font-family: "Lato", sans-serif;
 }
@@ -124,6 +126,18 @@
     text-align: left;
   }
 }
+.iconDetails {
+ margin-left:2%;
+float:left; 
+height:300px;
+width:300px; 
+} 
+
+.container2 {
+    width:100%;
+    height:auto;
+    padding:1%;
+} 
     </style>
   <body>
 
@@ -131,9 +145,10 @@
 </div>
 
     <div class="topnav" id="myTopnav">
-      <a href="#Inicio">Inicio</a>
+      <a href="#Inicio"> <button onclick="Inicio()">inicio</button></a>
       <a href="#Nosotros"class="active">Nosotros</a>
       <a href="#contact">Contactar</a>
+      <a href="#Atras"> <button onclick="Atra()">atras</button></a>
       <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
     <script>
@@ -189,16 +204,63 @@
       </a>
     </div>
   </div>
-  <button onclick="home()">inicio</button>
-  <button onclick="back()">atras</button>
   <div class="row">
     <div class="side">
-      <h2>About us</h2>
-      <p>Were two college students making a website as a project</p>
-      <p>We write about popular games that we've played, giving our opinion on what we think about them,
+      <h2 style="font-size:40px; color: white;">About us</h2>
+      <p style="font-size:20px; color: white;">Were two college students making a website as a project</p>
+      <p style="font-size:20px; color: white;">We write about popular games that we've played, giving our opinion on what we think about them,
          writing about features and things that can be improved within the game.
       </p>
     </div>
-  </div>
+    <div class='container2'>
+      <div>
+          <img src="https://media.esportsedition.com/wp-content/uploads/2015/11/Leauge.of_.Legends-1068x601.jpg" class='iconDetails'>
+      </div>  
+  <div style='margin-left:60px;'>
+  <h4 style="font-size:40px; color: white;">  League of legends</h4>
+  <div style="font-size:20px; color: white;"> League of Legends (LoL) is a multiplayer
+     online battle arena video game developed and published by Riot Games for Microsoft Windows and macOS.
+    In League of Legends, players assume the role of a "champion" with unique abilities
+     and battle against a team of other player- or computer-controlled champions. The goal is
+      usually to destroy the opposing team's "Nexus", a structure that lies at the heart of a
+       base protected by defensive structures, although other distinct game modes exist as well
+        with varying objectives, rules, and maps. Each League of Legends match is discrete, with 
+        all champions starting off relatively weak but increasing in strength by accumulating items
+         and experience over the course of the game. </div>
+      </div>
+   <div> &nbsp;&nbsp;</div> 
+   <div> &nbsp;&nbsp;</div> 
+    <div class='container2'>
+      <div>
+          <img src="https://assets1.ignimgs.com/2019/02/04/apex-legends---button-fin-1549319070496.jpg" class='iconDetails'>
+      </div>  
+  <div style='margin-left:60px;'>
+  <h4 style="font-size:40px; color: white;">   Apex Legends</h4>
+  <div style="font-size:20px; color: white;">  Apex Legends is a free-to-play battle royale game
+     developed by Respawn Entertainment and published by Electronic Arts. It was released for Windows,
+      PlayStation 4 and Xbox One on February 4, 2019, without any prior announcement or marketing. 
+      The game is in its fourth season. 
+      In Apex Legends, up to 20 three-person squads or 2 person duos land on an island before searching 
+      for weapons and supplies to attempt to defeat all other players in combat. Each player must keep
+       moving to avoid being caught outside the play area. The final team alive wins the round.</div>
+</div>
+  <div> &nbsp;&nbsp;</div> 
+  <div> &nbsp;&nbsp;</div> 
+   <div class='container2'>
+     <div>
+         <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6f7eaccb-10b8-4a0a-bddc-f09a7200aa36/dbuwt3q-cdd174f7-92cb-45c0-83f0-7026eb110225.jpg/v1/fill/w_751,h_1063,q_70,strp/rainbow_six_siege___base_operators_poster_by_ambientflush_dbuwt3q-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTQ0OSIsInBhdGgiOiJcL2ZcLzZmN2VhY2NiLTEwYjgtNGEwYS1iZGRjLWYwOWE3MjAwYWEzNlwvZGJ1d3QzcS1jZGQxNzRmNy05MmNiLTQ1YzAtODNmMC03MDI2ZWIxMTAyMjUuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.zkE1YcqrlsiSmuVrOiD3Ri34BpQTWtHkgiBEmM01b2M7" class='iconDetails'>
+     </div>  
+ <div style='margin-left:60px;'>
+ <h4 style="font-size:40px; color: white;">   Rainbow Six Siege</h4>
+ <div style="font-size:20px; color: white;">  Tom Clancy's Rainbow Six Siege is an online tactical 
+  shooter video game developed by Ubisoft Montreal and published by Ubisoft. It was released worldwide 
+  for Microsoft Windows, PlayStation 4, and Xbox One on December 1, 2015. It was also set to be released 
+  for PlayStation 5 and Xbox Series X. The game puts heavy emphasis on environmental destruction and 
+  cooperation between players. Each player assumes control of an attacker or a defender in different 
+  gameplay modes such as rescuing a hostage, defusing a bomb, and taking control of an objective within 
+  a room. The title has no campaign but features a series of short, offline missions called, "situations" 
+  that can be played solo. </div>
+
+ </div>
   </body>
   </html>
