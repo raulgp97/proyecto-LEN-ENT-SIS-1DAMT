@@ -21,6 +21,12 @@
   background-size: cover;
   font-family: "Lato", sans-serif;
 }
+.header {
+  padding: 80px;
+  text-align: center;
+  color: white;
+  font: size 180;
+}
 .sidebar {
 height: 100%;
 width: 80px;
@@ -148,14 +154,20 @@ input[type=submit]:hover {
 </style>
 
 <body>
-    <div class="sidebar">
-    </div>
+  <div class="sidebar">
+  </div>
+  <div class="header">
+    <h1 style="font-size:70px; color: white;">GAME EXPIRIENCE</h1>
+    <div> &nbsp;&nbsp;</div> 
+    <p style="font-size:40px; color: white;">Popular multiplayer games</p>
+  </div>
+  <div> &nbsp;&nbsp;</div> 
     
     <div class="topnav" id="myTopnav">
-        <a href="#Inicio"> <button onclick="Inicio()">inicio</button></a>
-        <a href="proyectoLM.ED.SIS_html&css.html">Nosotros</a>
-        <a href="proyectoLM.ED.SIS_html&css2.html"class="active">Contactar</a>
-        <a href="#Atras"> <button onclick="Atra()">atras</button></a>
+      <a href="" id="Home" onclick="home()">Home</a> 
+      <a href="proyectoLM.ED.SIS_html&css.html">About Us</a>
+      <a href="proyectoLM.ED.SIS_html&css2.html"class="active">Contact</a>
+      <a href="" id="Back" onclick="back()">Back</a> 
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
       <script>
@@ -181,6 +193,11 @@ input[type=submit]:hover {
           <div class="row">
             <div class="column">
               <img src="http://cdn.segmentnext.com/wp-content/uploads/2016/01/Video-Games-Controllers.jpg" style="width:100%">
+              <h2 style="font-size:40px; color: rgb(0, 0, 0);">About us</h2>
+              <p style="font-size:20px; color: rgb(0, 0, 0);">Were two college students making a website as a project.</p>
+              <p style="font-size:20px; color: rgb(0, 0, 0);">We write about popular games that we've played, giving our opinion on what we think about them,
+                 writing about features and things that can be improved within the game.
+              </p>
             </div>
             <div class="column">
               <form>

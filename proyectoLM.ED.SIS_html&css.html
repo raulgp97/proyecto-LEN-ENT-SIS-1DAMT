@@ -11,7 +11,7 @@
   <style>
         body{
   background-image:url(https://wallpaperaccess.com/full/343966.jpg);
-   padding: 100px;
+   padding: 80px;
     height: 100%; 
     background-repeat: no-repeat;
     background-position: center center;
@@ -28,7 +28,7 @@
   left: 0;
   background-color: #111;
   overflow-x: hidden;
-  padding-top: 16px;
+  padding-top: 10px;
 }
 
 .sidebar a {
@@ -58,6 +58,8 @@
   text-align: center;
   color: white;
   font: size 180;
+  @font-face { font-family: AquireBold; src: url('AquireBold.otf'); } 
+  @font-face { font-family: AquireBold; font-weight: bold; src: url('AquireBold.otf');}
 }
     .carousel-inner{
         width:100%;
@@ -151,12 +153,16 @@
 
     <div class="sidebar">
 </div>
-
+<div class="header">
+  <h1 style="font-size:70px; color: white;">GAME EXPIRIENCE</h1>
+  <div> &nbsp;&nbsp;</div> 
+  <p style="font-size:40px; color: white;">Popular multiplayer games</p>
+</div>
     <div class="topnav" id="myTopnav">
-      <a href="#Inicio"> <button onclick="Inicio()">inicio</button></a>
-      <a href="proyectoLM.ED.SIS_html&css.html"class="active">Nosotros</a>
-      <a href="proyectoLM.ED.SIS_html&css2.html">Contactar</a>
-      <a href="#Atras"> <button onclick="Atra()">atras</button></a>
+      <a href="" id="Home" onclick="home()">Home</a> 
+      <a href="proyectoLM.ED.SIS_html&css.html"class="active">About Us</a>
+      <a href="proyectoLM.ED.SIS_html&css2.html">Contact</a>
+      <a href="" id="Back" onclick="back()">Back</a> 
       <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
     <script>
@@ -169,13 +175,7 @@
         }
       }
       </script>
-
-
-    <div class="header">
-        <h1>GAME EXPIRIENCE</h1>
-        <p>  </p>
-        <p>Popular multiplayer games</p>
-      </div>
+      <div> &nbsp;&nbsp;</div> 
     <div class="container">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
@@ -214,11 +214,6 @@
   </div>
   <div class="row">
     <div class="side">
-      <h2 style="font-size:40px; color: white;">About us</h2>
-      <p style="font-size:20px; color: white;">Were two college students making a website as a project.</p>
-      <p style="font-size:20px; color: white;">We write about popular games that we've played, giving our opinion on what we think about them,
-         writing about features and things that can be improved within the game.
-      </p>
       <div class="container">
         <div style="text-align:center">
           <h2 style="font-size:40px; color: black;">League of legends</h2>
@@ -286,8 +281,5 @@
     </div>
     <a href="https://www.ubisoft.com/en-us/game/rainbow-six/siege">Rainbow Six Siege Homepage</a>
   </div>
-  
-  <!----------<a href="" id="inicio" onclick="home()">Inicio</a> ----------->
-  <!----------<a href="" id="atras" onclick="back()">atras</a> ----------->
   </body>
   </html>
