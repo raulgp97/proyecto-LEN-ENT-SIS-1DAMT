@@ -6,13 +6,19 @@ body{
   background-position: center center;
   background-attachment: fixed;
 background-size: cover;
-font-family: "Lato", sans-serif;
-}
+font-family: "Poppins-Medium";
 }
 @font-face{
-    font-family:"AquireBold";
-    src:url('AquireBold.eot') format('embedded-opentype'),
-    url('AquireBold.otf') format('opentype');
+  font-family:"Oasis-BW0JV";
+  src:url('Oasis-BW0JV.eot') format('embedded-truetype'),
+  url('Oasis-BW0JV.ttf') format('truetype');
+
+}
+
+@font-face{
+  font-family:"Poppins-Medium";
+  src:url('Poppins-Medium.eot') format('embedded-truetype'),
+  url('Poppins-Medium.ttf') format('truetype');
 
 }
     .header {
@@ -20,7 +26,7 @@ font-family: "Lato", sans-serif;
   text-align: center;
   color: white;
   font: size 180;
-  font-family: AquireBold;
+  font-family: Oasis-BW0JV;
 }
 .sidebar {
 height: 100%;
