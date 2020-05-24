@@ -1,0 +1,101 @@
+﻿@page
+@model IndexModel
+@{
+
+
+
+    ViewData["Exportar"] =""  ;
+
+
+    XmlTextReader hola = null;
+    XmlDocument documento = null;
+    XmlDocument nuevo = null;
+    string prueba ="";
+    try
+    {
+
+
+        hola = new XmlTextReader("C:/xampp/htdocs/proyecto/xml/informacion.xml");
+
+
+
+        documento = new XmlDocument();
+
+        documento.Load(hola);
+
+        documento.Save("Hola.xml");
+
+
+        while (hola.Read())
+        {
+            switch (hola.NodeType)
+            {
+                case XmlNodeType.Element:
+                    prueba += hola.Name.ToString();
+
+                    break;
+                case XmlNodeType.Text:
+                    prueba += hola.Value.ToString();
+                    break;
+
+
+            }
+
+        }
+
+
+
+        documento.Save("hola.xml");
+
+
+    }
+    catch (XmlException a)
+    {
+
+        Console.WriteLine(a.Message);
+
+    }
+    catch (FileNotFoundException e)
+    {
+
+        Console.WriteLine(e.Message);
+    }
+    finally
+    {
+
+        hola.Close();
+    }
+
+}
+
+@using System.Xml;
+@using System;
+@using System.IO;
+
+@{
+
+    //TODO: Sustitur atributo onclick por ViewData[];
+
+
+    /*Console.WriteLine("Introduce el nombre del archivo que deseas crear: ");
+
+    XmlDocument documento = new XmlDocument();
+
+    XmlDeclaration declaracion = documento.CreateXmlDeclaration("1.0", "UTF-8", null);
+
+    XmlElement raiz = documento.CreateElement("raiz");
+
+
+    documento.AppendChild(raiz);
+    documento.InsertBefore(declaracion, raiz);
+
+    XmlElement subhijo = documento.CreateElement("grupo");
+    subhijo.InnerText = "hola";
+
+    raiz.AppendChild(subhijo);
+
+    documento.Save("./hola.xml");*/
+
+
+
+}
