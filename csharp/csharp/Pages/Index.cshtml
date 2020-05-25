@@ -1,78 +1,102 @@
 ﻿@page
 @model IndexModel
-@{
-
-
-
-    ViewData["Exportar"] =""  ;
-
-
-    XmlTextReader hola = null;
-    XmlDocument documento = null;
-    XmlDocument nuevo = null;
-    string prueba ="";
-    try
-    {
-
-
-        hola = new XmlTextReader("C:/xampp/htdocs/proyecto/xml/informacion.xml");
-
-
-
-        documento = new XmlDocument();
-
-        documento.Load(hola);
-
-        documento.Save("Hola.xml");
-
-
-        while (hola.Read())
-        {
-            switch (hola.NodeType)
-            {
-                case XmlNodeType.Element:
-                    prueba += hola.Name.ToString();
-
-                    break;
-                case XmlNodeType.Text:
-                    prueba += hola.Value.ToString();
-                    break;
-
-
-            }
-
-        }
-
-
-
-        documento.Save("hola.xml");
-
-
-    }
-    catch (XmlException a)
-    {
-
-        Console.WriteLine(a.Message);
-
-    }
-    catch (FileNotFoundException e)
-    {
-
-        Console.WriteLine(e.Message);
-    }
-    finally
-    {
-
-        hola.Close();
-    }
-
-}
 
 @using System.Xml;
 @using System;
 @using System.IO;
 
+
+
 @{
+
+    <script>
+        var opcion = entrada();
+    function entrada() {
+        
+        var elegida;
+
+        do {
+
+            elegida = window.prompt("opciones\n" + "1. importar xml.\n" + "2. exportar xml.");
+
+        } while (opcion != "importar" && opcion != "exportar" && opcion != null);
+
+        return elegida;
+    }
+
+
+
+    </script>
+
+   
+
+}
+
+@functions{
+
+
+
+    public static String prueba(string opcion)
+    {
+
+        
+
+        XmlTextReader hola = null;
+        XmlDocument documento = null;
+        string prueba = "";
+        try
+        {
+
+
+            hola = new XmlTextReader("C:/xampp/htdocs/proyecto/xml/informacion.xml");
+
+            documento = new XmlDocument();
+
+            documento.Load(hola);
+
+            documento.Save("Hola.xml");
+
+
+            while (hola.Read())
+            {
+                switch (hola.NodeType)
+                {
+                    case XmlNodeType.Element:
+                        prueba += hola.Name.ToString();
+
+                        break;
+                    case XmlNodeType.Text:
+                        prueba += hola.Value.ToString();
+                        break;
+
+
+                }
+
+            }
+
+            documento.Save("hola.xml");
+
+        }
+        catch (XmlException a)
+        {
+
+            Console.WriteLine(a.Message);
+
+        }
+        catch (FileNotFoundException e)
+        {
+
+            Console.WriteLine(e.Message);
+        }
+        finally
+        {
+
+            hola.Close();
+        }
+
+        return "hola";
+
+    }
 
     //TODO: Sustitur atributo onclick por ViewData[];
 
@@ -98,4 +122,7 @@
 
 
 
+
 }
+
+
