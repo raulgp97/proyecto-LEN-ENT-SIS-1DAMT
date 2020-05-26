@@ -94,6 +94,7 @@ body{/*Aqui estamos creando el diseño proncipal para la pagina, manejando el fo
     border-radius: 10px;
     background-color: #f2f2f2;
     padding: 20px;
+    box-sizing: inherit;
   }
 /*Esto crea dos columnas para moverlo al lado de cada uno*/
   .column {
