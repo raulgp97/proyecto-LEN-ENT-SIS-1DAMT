@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<grupo>
+
+<empresa>
+
+<nombre>Riot Games</nombre>
+<fundacion>31 de agosto de 2006</fundacion>
+<ingresos>US$1.6 mil millones</ingresos>
+
+
+</empresa>
+
+<empresa>
+
+<nombre>Ubisoft</nombre>
+<fundacion>28 de marzo de 1986</fundacion>
+<ingresos>1.280 millones € </ingresos>
+
+
+</empresa>
+
+
+<empresa>
+
+<nombre>Electronic Arts</nombre>
+<fundacion>27 de mayo de 1982</fundacion>
+<ingresos>4.143 millones USD</ingresos>
+
+
+</empresa>
+
+
+<empresa>
+
+<nombre>Activision</nombre>
+<fundacion>1 de octubre de 1978</fundacion>
+<ingresos>2.900 millones de dólares</ingresos>
+
+
+</empresa>
+
+
+</grupo>
