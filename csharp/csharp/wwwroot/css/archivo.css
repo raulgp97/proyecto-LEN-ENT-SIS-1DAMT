@@ -8,19 +8,6 @@
     background-size: cover;
     font-family: "Poppins-Medium";
 }
-
-.sidebar {
-    height: 100%;
-    width: 80px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 10px;
-}
-
     .sidebar a {
         padding: 6px 8px 6px 16px;
         text-decoration: none;

@@ -21,11 +21,7 @@ switch (respuesta) {
 
     case "exportar":
 
-        //var sentencia = "@ViewData['Exportar']";
-
-        
-
-        
+        window.alert("Funcion no disponible");
 
         break;
 

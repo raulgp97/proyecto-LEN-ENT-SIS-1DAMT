@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>GAME EXPIRIENCE</title>
+    <title>GAME EXPERIENCE</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -10,27 +10,167 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="~/css/archivo.css" type="text/css" rel="stylesheet" />
-    
+
 </head>
 
 <body>
 
+
+    @using System.Xml;
+    @using System;
+    @using System.IO;
+
+    @{
+
+        string elegida = "";
+
+
+    }
+
+    @functions{
+
+
+        public static string entrada(string elegida)
+        {
+
+            
+            <text>
+            <script>
+
+             
+
+            do {
+
+                @elegida = window.prompt("opciones\n" + "1. importar xml.\n" + "2. exportar xml.");
+
+            } while (@elegida != "importar" && @elegida != "exportar" && @elegida != null);
+
+
+            </script>
+
+            </text>
+
+            switch (elegida)
+            {
+
+                case "importar":
+
+
+                    importar();
+
+                    break;
+
+                case "exportar":
+
+                    exportar();
+
+                    break;
+
+
+                case null:
+
+                    <text>
+
+                    <script>
+
+                        window.alert("Has salido de la ventana");
+
+                    </script>
+
+                  </text>
+
+                    break;
+
+            }
+
+            return elegida;
+
+        }
+
+
+        public static void importar()
+        {
+
+            <text>
+
+            <script>
+
+                var xml = new XMLHttpRequest();
+
+                xml.open('GET', './informacion.xml', true);
+
+                xml.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+
+                        window.alert(xml.responseText);
+                    }
+                }
+
+                xml.send();
+
+            </script>
+         
+        </text>
+
+        }
+
+        public static void exportar()
+        {
+
+            XmlTextReader hola = null;
+            XmlDocument documento = null;
+            try
+            {
+
+
+                hola = new XmlTextReader("C:/xampp/htdocs/proyecto/xml/informacion.xml");
+
+                documento = new XmlDocument();
+
+                documento.Load(hola);
+
+                documento.Save("Hola.xml");
+
+            }
+            catch (XmlException a)
+            {
+
+                Console.WriteLine(a.Message);
+
+            }
+            catch (FileNotFoundException e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+
+                hola.Close();
+            }
+
+        }
+
+    }
+
+
+
     <div class="sidebar">
     </div>
     <div class="header">
-        <h1 style="font-size:70px; color: white;">GAME EXPIRIENCE</h1>
+        <h1 style="font-size:70px; color: white;">GAME EXPERIENCE</h1>
         <div> &nbsp;&nbsp;</div>
         <p style="font-size:40px; color: white;">Popular multiplayer games</p>
     </div>
     <div class="topnav" id="myTopnav">
         <a href="" id="Home" onclick="home()">Home</a>
-        <a href="proyectoLM.ED.SIS_html&css.html" class="active">About Us</a>
+        <a href="proyectoLM.ED.SIS_html&css.html" class="active">articlesTwo</a>
         <a href="proyectoLM.ED.SIS_html&css2.html">Contact</a>
-        <a href="" onclick="@Pages._Pages_Index.prueba()">xml</a>
+        <a href="" onclick="@entrada(elegida)">@ViewData["archivo"]</a>
         <a href="" id="Back" onclick="back()">Back</a>
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
-    
+
     <script>
         function myFunction() {
             var x = document.getElementById("myTopnav");
@@ -41,7 +181,7 @@
             }
         }
     </script>
-    
+
     <div class="row">
         <div class="side">
             <div class="container">
@@ -63,7 +203,7 @@
                 </div>
                 <a href="https://www.callofduty.com/es/modernwarfare">Call Of Duty Modern Warfare Homepage</a>
                 <div> &nbsp;&nbsp;</div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/mtjkqrvUg_4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="1125" height="485" src="https://www.youtube.com/embed/mtjkqrvUg_4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div> &nbsp;&nbsp;</div>
             <div> &nbsp;&nbsp;</div>
@@ -73,7 +213,7 @@
                 </div>
                 <div class="row">
                     <div class="column">
-                        <img src="https://wallpapersmug.com/large/2c079e/poster-game-apex-legends.jpg" style="width:100%">
+                        <img src="https://cloudfront-us-east-1.images.arcpublishing.com/elcomercio/6RLBHNACQBCIXGAF3ZQ2Z4DEXM.jpg" style="width:100%">
                     </div>
                     <div class="column">
                         <div style="font-size:20px; color: black;">
@@ -90,7 +230,7 @@
                 </div>
                 <a href="https://www.epicgames.com/fortnite/es-ES/ch2-s2?utm_source=GoogleSearch&utm_medium=Search&utm_campaign=an*Internal_pr*FNBR_ct*Performance_pl*SearchBrand_co*ES_cr*exactSpanish&utm_id=1698341423&sub_campaign=Fortnite_Exact_ES&utm_content=&utm_term=fortnite&utm_term=fortnite&gclid=EAIaIQobChMI9eW75eXO6QIVELTVCh2SDg_7EAAYASAAEgKqqfD_BwE">Fortnite Homepage</a>
                 <div> &nbsp;&nbsp;</div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/i6lR2s-0EU0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="1125" height="485" src="https://www.youtube.com/embed/i6lR2s-0EU0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div> &nbsp;&nbsp;</div>
             <div> &nbsp;&nbsp;</div>
@@ -113,40 +253,18 @@
                 </div>
                 <a href="https://www.minecraft.net/es-es/">Minecraft Homepage</a>
                 <div> &nbsp;&nbsp;</div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/MmB9b5njVbA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div> &nbsp;&nbsp;</div>
-            <div> &nbsp;&nbsp;</div>
-            <div class="container">
-                <div style="text-align:center">
-                    <h2 style="font-family: Oasis-BW0JV;font-size:40px; color: rgb(0, 0, 0);">About us</h2>
-                </div>
-                <div class="row">
-                    <div class="column">
-                        <img src="https://cdn.doordash.com/media/restaurant/cover/Dos_Amigos_Rio_Grande.png" style="width:100%">" style="width:100%">
-                    </div>
-                    <div class="column">
-                        <div>
-                            <p style="font-size:20px; color: rgb(0, 0, 0);">Were two college students making a website as a project.</p>
-                            <p style="font-size:20px; color: rgb(0, 0, 0);">
-                                We tell you a bit about them, whats the game based on, how do you play
-                                , the objectives and who made them. We hope you find our page useful and enjoy. If you have any suggestions or want
-                                to leave us a message simply go to the contact page and let us know.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <iframe width="1125" height="485" src="https://www.youtube.com/embed/MmB9b5njVbA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </div>
-        <div>
+    <div>
 
-            @RenderBody()
+        @RenderBody()
 
-        </div>
+    </div>
 
 
-        @RenderSection("scripts", required: false)
+
 
 
 </body>
