@@ -1,4 +1,4 @@
-body{
+body{/*Aqui estamos creando el diseño proncipal para la pagina, manejando el fondo y el fuente*/
     background-image:url(https://wallpaperaccess.com/full/343966.jpg);
      padding: 80px;
       height: 100%; 
@@ -8,13 +8,7 @@ body{
     background-size: cover;
     font-family: "Poppins-Medium";
   }
-
-  
-  @media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
-  }
-  @font-face{
+  @font-face{/*Usando el font-face llamo al fuente guradado en el mismo archivo*/
       font-family:"Oasis-BW0JV";
       src:url('Oasis-BW0JV.eot') format('embedded-truetype'),
       url('Oasis-BW0JV.ttf') format('truetype');
@@ -26,30 +20,26 @@ body{
     url('Poppins-Medium.ttf') format('truetype');
 
 }
-      .header {
+      .header {/*La personalizacion del titulo*/
     padding: 120px;
     text-align: center;
     color: white;
     font: size 360;
     font-family: Oasis-BW0JV;
   }
-      .carousel-inner{
-          width:100%;
-      }
     .row {  
-    display: -ms-flexbox; 
     display: flex;
     -ms-flex-wrap: wrap; 
     flex-wrap: wrap;
   }
   
-  .side {
+  .side {/*Para mover cosas lado a lado*/
     -ms-flex: 30%;
     flex: 30%;
     color: white;
     padding: 20px;
   }
-  
+  /*Todo que pone topnav tiene relacion al barra de menu de arriba */
   .topnav {
     overflow: hidden;
     background-color: rgb(0, 0, 0);
@@ -65,21 +55,21 @@ body{
     font-size: 17px;
   }
   
-  .topnav a:hover {
+  .topnav a:hover {/*Como deberia reaccionar el menu cuando pasamos el raton encima*/
     background-color: rgb(255, 255, 255);
     color: black;
   }
   
-  .topnav a.active {
+  .topnav a.active {/*Como es la parte seccion del menu elegido*/
     background-color: rgb(50, 21, 133);
     color: white;
   }
   
-  .topnav .icon {
+  .topnav .icon {/*Esto es el icono del menu que no se ve hasta cuando el afecto de responsive se enciende*/
     display: none;
   }
   
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 700px) {/*Esto sirve para activar el icono para remplazar el menu en si*/
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;
@@ -87,36 +77,28 @@ body{
     }
   }
   
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 700px) {/*Esto mueve el menu relativamente al icono*/
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
       position: absolute;
       right: 0;
       top: 0;
     }
-    .topnav.responsive a {
+    .topnav.responsive a {/*Como reacciona el responsive del menu*/
       float: none;
       display: block;
-      text-align: left;
+      text-align:   left;
     }
   }
-  /*new*/
-  .container {
+  .container {/*El contenedor que se ve como fondo para los textos y videos*/
     border-radius: 10px;
     background-color: #f2f2f2;
     padding: 20px;
   }
-  /* Create two columns that float next to eachother */
+/*Esto crea dos columnas para moverlo al lado de cada uno*/
   .column {
     float: left;
     width: 50%;
     margin-top: 6px;
     padding: 20px;
   }
-  .responsive {
-    background: url('https://s20.postimg.org/o09gf7fvx/bag.jpg') no-repeat center top;
-    border: 1px solid red;
-    background-size: contain;
-    width: 100%;
-    height: 270px;
-}

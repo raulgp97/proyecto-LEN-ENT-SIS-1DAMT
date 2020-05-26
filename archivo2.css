@@ -79,7 +79,7 @@ display: none;
   text-align: left;
 }
 }
-/*Contact*/
+/*Esto es para meter informacion en los cuadros de texto*/
 input[type=text], select, textarea {
 width: 100%;
 padding: 12px;
@@ -88,7 +88,7 @@ margin-top: 6px;
 margin-bottom: 16px;
 resize: vertical;
 }
-
+/*Esto es para el boton de submitir*/
 input[type=submit] {
 background-color: rgb(50, 21, 133);
 color: white;
@@ -96,27 +96,25 @@ padding: 12px 20px;
 border: none;
 cursor: pointer;
 }
-
+/*Como reacciona el boton si pasas el raton por encima*/
 input[type=submit]:hover {
 background-color:  rgb(50, 21, 133);
 }
 
-/* Style the container/contact section */
+/*La personalizacion del contenedor*/
 .container {
 border-radius: 10px;
 background-color: #f2f2f2;
 padding: 20px;
 }
 
-/* Create two columns that float next to eachother */
 .column {
 float: left;
 width: 50%;
 margin-top: 6px;
 padding: 20px;
 }
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+/*Responsive - Cuando la pantalla sea menos de 600px ancho que las dos columnas se represente uno encima del otro*/
 @media screen and (max-width: 600px) {
 .column, input[type=submit] {
   width: 100%;
