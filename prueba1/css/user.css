@@ -1,0 +1,15 @@
+/*Modificación del fondo de la página web.*/
+.body .container{
+  
+    background-color: #f2f2f2;
+   
+
+  
+  
+  
+}
+
+body.site {
+    border-top: 3px solid #08C;
+    background-color: #DC2218;
+}
